@@ -1,0 +1,31 @@
+{
+  "name": "init-my-app",
+  "version": "1.0.0",
+  "description": "this is highly opinionated starter / initiation of web app development by the author",
+  "main": "./bin/init-my-app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuggerNaz/init-my-app.git"
+  },
+  "keywords": [
+    "starter"
+  ],
+  "author": "Nazrul Muhaimin (JuggerNaz)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/JuggerNaz/init-my-app/issues"
+  },
+  "homepage": "https://github.com/JuggerNaz/init-my-app#readme",
+  "dependencies": {
+    "boxen": "^7.0.2",
+    "chalk": "^5.2.0",
+    "figlet": "^1.5.2"
+  },
+  "type": "module",
+  "bin": {
+    "init-my-app" : "./bin/init-my-app.js"
+  }
+}
