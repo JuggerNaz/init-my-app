@@ -46,22 +46,22 @@ const run = async () => {
 
     log(chalk.bgRed(`Another way of getting current path: ${ path.dirname(import.meta.url) }`))
 
-    // createDirectory(projectName)
-    // copyDirectoryToDirectory( getDirectoryFullPath() + src, projectName)
+    createDirectory(projectName)
+    copyDirectoryToDirectory( getDirectoryFullPath() + src, projectName)
 
-    // const packageJSON = JSON.parse(await readFile(packageSrc))
+    const packageJSON = JSON.parse(await readFile(packageSrc))
 
-    // if(css === 'twind'){
-    //     packageJSON.dependencies = { ...packageJSON.dependencies, 'twind': 'latest' }
-    // }
+    if(css === 'twind'){
+        packageJSON.dependencies = { ...packageJSON.dependencies, 'twind': 'latest' }
+    }
 
-    // await writeFile(packageSrc, JSON.stringify(packageJSON, null, "\t"))
+    await writeFile(packageSrc, JSON.stringify(packageJSON, null, "\t"))
 
-    // log(chalk.green.bold(`\n App has been initated. Next: 
-    // ▶️  cd ${projectName}
-    // ▶️  npm intall
-    // ▶️  npm run dev
-    // `))
+    log(chalk.green.bold(`\n App has been initated. Next: 
+    ▶️  cd ${projectName}
+    ▶️  npm intall
+    ▶️  npm run dev
+    `))
 }
 
 run()
