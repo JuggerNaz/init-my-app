@@ -4,7 +4,6 @@ import figlet from 'figlet'
 import chalk from 'chalk'
 import boxen from 'boxen'
 import path from 'path'
-import url from 'url'
 
 import askProjectDetail from '../lib/inquirer.js'
 import { createDirectory, copyDirectoryToDirectory, readFile, writeFile, getDirectoryFullPath } from '../lib/files.js' 
@@ -42,13 +41,10 @@ const run = async () => {
     const src = `/templates/${bundler}/react/${language}`
     const packageSrc = `./${projectName}/package.json`
 
-    log(chalk.blue.bold(`\n\n Complete path: ${getDirectoryFullPath()}`))
-
-    log(chalk.bgRed(`Another way of getting current path: ${ path.dirname(import.meta.url) }`))
-
-    createDirectory(projectName)
+    createDirectory(projectName) //can run in windows
+    
     copyDirectoryToDirectory( getDirectoryFullPath() + src, projectName)
-
+    
     const packageJSON = JSON.parse(await readFile(packageSrc))
 
     if(css === 'twind'){
